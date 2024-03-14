@@ -1,5 +1,4 @@
 # This script is part of a larger research project shown at https://github.com/mmeberg/PyVulDet-NER
-# The code below referenced the work done in https://github.com/LauraWartschinski/VulnerabilityDetection to obtain GitHub samples. 
 
 import os
 import requests
@@ -10,14 +9,12 @@ from requests_oauthlib import OAuth1Session
 from requests_oauthlib import OAuth1
 import datetime
 
-
 def searchforkeyword(key, commits, access):
-    
     params = (('q', key+'+language:python+committer-date:>2012-01-01'),
               ('per_page',100), 
               ('sort', 'committer-date'))
     myheaders = {'Accept': 'application/vnd.github.cloak-preview', 'Authorization': 'token ' + access}
-    nextlink = "https://api.github.com/search/commits" #"https://api.github.com/search/issues"
+    nextlink = "https://api.github.com/search/commits"
                 
     response = requests.get(nextlink, headers=myheaders,params=params)    
     headers = response.headers
@@ -170,15 +167,11 @@ def analyzelinks(link):
         link = rest
     return(reflinks)
 
-
 start = time.time()
 print(start)
 
-if not os.path.isfile('access'):
-    print("Need a Github access token in this directory.")
-    sys.exit()
-
-with open('access', 'r') as accestoken:
+# Need a Github access token in this directory.
+with open('Githubtoken', 'r') as accestoken:
     access = accestoken.readline().replace("\n","")
 
 commits = {}
