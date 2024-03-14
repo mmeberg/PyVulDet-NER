@@ -1,5 +1,4 @@
 # This script is part of a larger research project shown at https://github.com/mmeberg/PyVulDet-NER
-# The code below referenced the work done in https://github.com/LauraWartschinski/VulnerabilityDetection to obtain GitHub samples. 
 
 import myutils
 import time
@@ -15,7 +14,6 @@ from collections import Counter
 import signal
 import os
  
-
 def getChanges(rest):
     changes = []
     while ("diff --git" in rest):
@@ -61,7 +59,6 @@ def getChanges(rest):
 
             if len(change) > 0:
                 changes.append([titleline,change])
-
     return changes
 
 
