@@ -1,12 +1,10 @@
 # This script is part of a larger research project shown at https://github.com/mmeberg/PyVulDet-NER
-# The code below referenced the work done in https://github.com/LauraWartschinski/VulnerabilityDetection to obtain GitHub samples. 
 
 import requests
 import time
 import sys
 import json
 import datetime
-
 
 def check_if_have(repository, sha):
     if repository in prev_results: 
@@ -66,9 +64,7 @@ def getdiffs(repository):
 
 start = time.time()
 
-if not os.path.isfile('access'):
-    print("Need a Github access token in this directory.")
-    sys.exit()
+#Need a Github access token in this directory.
 with open('access', 'r') as accestoken:
     access = accestoken.readline().replace("\n","")
 
