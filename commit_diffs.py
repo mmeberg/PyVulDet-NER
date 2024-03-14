@@ -65,7 +65,7 @@ def getdiffs(repository):
 start = time.time()
 
 #Need a Github access token in this directory.
-with open('access', 'r') as accestoken:
+with open('Githubtoken', 'r') as accestoken:
     access = accestoken.readline().replace("\n","")
 
 #Commits from "commits_from_GitHub.py"
