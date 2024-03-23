@@ -6,3 +6,14 @@ Vulnerabilities within source code have grown over the last 20 years to become a
 ______________________________
 
 PyVulNER.ipynb includes all information necessary from complete data collection to model testing.
+
+Data: 
+https://huggingface.co/datasets/mmeberg/PyVulDet-NER
+https://data.mendeley.com/datasets/h22kxj6ydt/1
+
+Models:
+https://huggingface.co/mmeberg/RoRo_PyVulDet_NER
+https://huggingface.co/mmeberg/RoCo_PyVulDet_NER
+https://huggingface.co/mmeberg/DiDi_PyVulDet_NER
+https://huggingface.co/mmeberg/CoRo_PyVulDet_NER
+https://huggingface.co/mmeberg/CoCo_PyVulDet_NER
